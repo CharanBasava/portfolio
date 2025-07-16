@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charan Basava | Full Stack Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    };
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body id="main-body" class="overflow-x-hidden bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-300">
+  <canvas id="cursor-effect"></canvas>
+  <div id="loading-screen" class="fixed inset-0 flex items-center justify-center bg-white z-[9999]">
+    <div class="loader"></div>
+  </div>
+
+  <header class="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-md">
+    <div class="flex justify-between items-center px-6 py-4 md:px-10">
+      <h1 class="text-2xl font-bold text-blue-600">Charan Basava</h1>
+
+      <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav>
+        <ul id="nav-menu" class="hidden md:flex flex-col md:flex-row gap-4 md:gap-6 text-lg font-medium absolute md:static top-16 left-0 w-full md:w-auto bg-white dark:bg-gray-800 md:bg-transparent px-6 py-4 md:p-0 shadow-md md:shadow-none">
+          <li><a href="#home" class="block py-2 hover:text-blue-600">Home</a></li>
+          <li><a href="#about" class="block py-2 hover:text-blue-600">About</a></li>
+          <li><a href="#skills" class="block py-2 hover:text-blue-600">Skills</a></li>
+          <li><a href="#experience" class="block py-2 hover:text-blue-600">Experience</a></li>
+          <li><a href="#projects" class="block py-2 hover:text-blue-600">Projects</a></li>
+          <li><a href="#certifications" class="block py-2 hover:text-blue-600">Certifications</a></li>
+          <li><a href="#contact" class="block py-2 hover:text-blue-600">Contact</a></li>
+          <li>
+            <button id="toggleDark" class="text-xl focus:outline-none text-yellow-500 hover:text-yellow-600">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="flex flex-col-reverse lg:flex-row items-center justify-center gap-16 px-6 md:px-10 py-20 min-h-screen">
+    <div class="max-w-2xl text-center lg:text-left">
+      <h2 class="text-5xl font-bold mb-4">Hi, I'm <span class="text-blue-600">Charan</span></h2>
+      <h3 class="text-3xl font-medium mb-4">Full Stack Developer</h3>
+      <p class="mb-8 text-lg text-gray-700 leading-relaxed">
+        Passionate about creating scalable web applications with modern technologies. Currently building the future with React, Django, and cutting-edge tools.
+      </p>
+
+      <div class="flex flex-wrap justify-center lg:justify-start gap-4 mb-6">
+        <a href="#contact" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition">Get In Touch</a>
+        <a href="#projects" class="border border-gray-600 px-6 py-2 rounded-full hover:bg-gray-200 transition">View Projects</a>
+        <a href="Charan_Basava_Resume_FullStackDeveloper.pdf" target="_blank" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition">Download Resume</a>      </div>
+
+      <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+        <a href="https://github.com/CharanBasava" target="_blank" class="flex items-center gap-2 px-5 py-2 border border-gray-300 rounded-full text-gray-700 hover:bg-gray-100 transition">
+          <i class="fab fa-github text-xl"></i> GitHub
+        </a>
+        <a href="https://linkedin.com/in/charan-basava-961599284" target="_blank" class="flex items-center gap-2 px-5 py-2 border border-gray-300 rounded-full text-gray-700 hover:bg-gray-100 transition">
+          <i class="fab fa-linkedin text-xl text-blue-600"></i> LinkedIn
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" class="flex items-center gap-2 px-5 py-2 border border-gray-300 rounded-full text-gray-700 hover:bg-gray-100 transition">
+          <i class="fab fa-instagram text-xl text-pink-500"></i> Instagram
+        </a>
+      </div>
+    </div>
+
+    <div class="flex-shrink-0">
+      <img src="off.jpg" alt="Charan Profile" class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-white shadow-xl transform transition duration-500 hover:scale-105 hover:shadow-blue-500/50 hover:shadow-2xl" />
+    </div>
+  </section>
+
+  <section id="about" class="px-6 md:px-10 py-24 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 min-h-screen flex items-center justify-center">
+    <div class="max-w-4xl text-center">
+      <h2 class="text-4xl font-extrabold text-gray-900 mb-8">About Me</h2>
+      <p class="text-lg text-gray-700 leading-8 mb-8">
+        I'm a results-driven <span class="font-semibold text-blue-600">Full Stack Developer</span> with hands-on experience in building scalable web applications using
+        <span class="font-semibold">ReactJS, Django, and MySQL</span>.
+        I’m skilled in developing RESTful APIs, implementing CRUD operations, and deploying secure, responsive interfaces.
+        <br>
+        Passionate about writing clean, maintainable code and solving real-world problems, I’m looking to grow in an agile tech environment where I can contribute to full-stack development and collaborate with cross-functional teams.
+      </p>
+
+      <div class="mt-12 text-left">
+        <h3 class="text-2xl font-semibold text-blue-600 mb-4">🎓 Education</h3>
+
+        <div class="bg-gray-100 p-5 rounded-lg shadow mb-4">
+          <p class="text-lg font-medium text-gray-800">Bachelor of Technology in Computer Science & Business Systems (CSBS)</p>
+          <p class="text-gray-700">SRKR Engineering College, Bhimavaram</p>
+          <p class="text-gray-500">2023 – 2026 | CGPA: 8.19</p>
+        </div>
+
+        <div class="bg-gray-100 p-5 rounded-lg shadow">
+          <p class="text-lg font-medium text-gray-800">Diploma in Computer Engineering (CME)</p>
+          <p class="text-gray-700">BVC Institute of Technology & Science, Batlapalem</p>
+          <p class="text-gray-500">2020 – 2023 | CGPA: 8.7</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="px-6 md:px-10 py-24 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen flex items-center justify-center">
+    <div class="max-w-6xl w-full text-center">
+      <h2 class="text-4xl font-extrabold text-gray-900 mb-12">Skills</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
+
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition w-full">
+          <i class="fab fa-html5 text-4xl text-orange-500 mb-4"></i>
+          <h3 class="text-lg font-semibold">HTML5</h3>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition w-full">
+          <i class="fab fa-css3-alt text-4xl text-blue-500 mb-4"></i>
+          <h3 class="text-lg font-semibold">CSS3</h3>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition w-full">
+          <i class="fab fa-js text-4xl text-yellow-400 mb-4"></i>
+          <h3 class="text-lg font-semibold">JavaScript</h3>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition w-full">
+          <i class="fab fa-react text-4xl text-blue-400 mb-4"></i>
+          <h3 class="text-lg font-semibold">ReactJS</h3>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition w-full">
+          <i class="fab fa-python text-4xl text-green-500 mb-4"></i>
+          <h3 class="text-lg font-semibold">Python</h3>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition w-full">
+          <i class="fas fa-server text-4xl text-purple-600 mb-4"></i>
+          <h3 class="text-lg font-semibold">Django</h3>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition w-full">
+          <i class="fas fa-database text-4xl text-gray-700 mb-4"></i>
+          <h3 class="text-lg font-semibold">MySQL</h3>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition w-full">
+          <i class="fas fa-code text-4xl text-indigo-600 mb-4"></i>
+          <h3 class="text-lg font-semibold">REST APIs</h3>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition w-full">
+          <i class="fas fa-table text-4xl text-green-600 mb-4"></i>
+          <h3 class="text-lg font-semibold">MS Excel</h3>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition w-full">
+          <i class="fas fa-chart-bar text-4xl text-yellow-600 mb-4"></i>
+          <h3 class="text-lg font-semibold">Power BI</h3>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition w-full">
+          <i class="fab fa-github text-4xl text-black mb-4"></i>
+          <h3 class="text-lg font-semibold">Git & GitHub</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="px-6 md:px-10 py-24 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen flex items-center justify-center">
+    <div class="max-w-4xl w-full text-center">
+      <h2 class="text-4xl font-extrabold text-gray-900 mb-12">Experience</h2>
+
+      <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition text-left mx-auto">
+        <h3 class="text-2xl font-semibold mb-1 text-blue-600">Django Developer Intern</h3>
+        <p class="text-gray-700 font-medium mb-1">The Entrepreneurship Network (Remote)</p>
+        <p class="text-sm text-gray-500 mb-4">June 2025 – Present</p>
+        <ul class="list-disc list-inside text-gray-700 text-base space-y-2">
+          <li>Contributed to frontend using <strong>ReactJS</strong> and backend with <strong>Django</strong> and <strong>RESTful APIs</strong>.</li>
+          <li>Implemented new features, fixed bugs, and wrote clean, maintainable code for real-time web apps.</li>
+          <li>Collaborated in an <strong>Agile team</strong> environment, practicing Git & GitHub version control.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="px-6 md:px-10 py-24 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen flex items-center justify-center">
+    <div class="max-w-6xl w-full text-center">
+      <h2 class="text-4xl font-extrabold text-gray-900 mb-12">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-xl transition text-left">
+          <h3 class="text-2xl font-semibold mb-2">
+            <i class="fas fa-music text-blue-500 mr-2"></i>MoodTunes AI
+          </h3>
+          <p class="text-gray-700 mb-4">
+            An AI-powered web app that detects user mood and plays matching songs using Hugging Face + Spotify API.
+          </p>
+          <p class="text-sm text-gray-600 font-medium mb-2">
+            <strong>Tech Used:</strong> <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>React.js</strong>, <strong>React Router DOM</strong>, <strong>Bootstrap</strong>, <strong>Axios</strong>, <strong>Python</strong>, <strong>Django</strong>, <strong>Django REST Framework</strong>, <strong>DistilBERT</strong>, <strong>Firebase Authentication</strong>, <strong>Firebase Firestore</strong>, <strong>Spotify Web API</strong>
+          </p>
+          <a href="https://github.com/CharanBasava/moodtunes" target="_blank" class="text-blue-600 hover:underline">View on GitHub</a>
+        </div>
+
+        <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-xl transition text-left">
+          <h3 class="text-2xl font-semibold mb-2">
+            <i class="fas fa-bell text-yellow-500 mr-2"></i>Smart Browser Alert Extension
+          </h3>
+          <p class="text-gray-700 mb-4">
+            A Chrome extension that overlays full-screen audio alerts to help users stay focused and on schedule.
+          </p>
+          <p class="text-sm text-gray-600 font-medium mb-2">
+            <strong>Tech Used:</strong> <strong>JavaScript (ES6+)</strong>, <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>Chrome Extension APIs</strong>, <strong>Manifest V3</strong>, <strong>localStorage</strong>, <strong>Notifications API</strong>, <strong>Fullscreen API</strong>, <strong>Vibration API</strong>
+          </p>
+          <a href="https://github.com/CharanBasava/smart_browser_extension" target="_blank" class="text-blue-600 hover:underline">View on GitHub</a>
+        </div>
+
+        <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-xl transition text-left">
+          <h3 class="text-2xl font-semibold mb-2">
+            <i class="fas fa-user text-purple-600 mr-2"></i>Portfolio Website
+          </h3>
+          <p class="text-gray-700 mb-4">
+            A personal responsive portfolio website to showcase skills, projects, and contact details in a professional layout.
+          </p>
+          <p class="text-sm text-gray-600 font-medium mb-2">
+            <strong>Tech Used:</strong> <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>JavaScript (ES6+)</strong>, <strong>Tailwind CSS</strong>, <strong>Font Awesome</strong>, <strong>EmailJS</strong>
+          </p>
+          <a href="https://github.com/CharanBasava/portfolio" target="_blank" class="text-blue-600 hover:underline">View on GitHub</a>
+        </div>
+
+        <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-xl transition text-left">
+          <h3 class="text-2xl font-semibold mb-2">
+            <i class="fas fa-boxes text-green-600 mr-2"></i>Product Management System
+          </h3>
+          <p class="text-gray-700 mb-4">
+            A secure platform with role-based login to manage product data using CRUD functionality and optimized MySQL database.
+          </p>
+          <p class="text-sm text-gray-600 font-medium mb-2">
+            <strong>Tech Used:</strong> <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>PHP</strong>, <strong>MySQL</strong>
+          </p>
+          <a href="https://github.com/CharanBasava/Inventory-control" target="_blank" class="text-blue-600 hover:underline">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications" class="px-6 md:px-10 py-24 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen flex items-center justify-center">
+    <div class="max-w-6xl w-full text-center">
+      <h2 class="text-4xl font-extrabold text-gray-900 mb-12">Certifications</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition text-left">
+          <h3 class="text-xl font-semibold mb-2">
+            <i class="fas fa-certificate text-yellow-500 mr-2"></i>Deloitte – Data Analytics Job Simulation
+          </h3>
+          <p class="text-gray-700 mb-2">Completed in July 2025</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition text-left">
+          <h3 class="text-xl font-semibold mb-2">
+            <i class="fas fa-certificate text-yellow-500 mr-2"></i>Google Analytics Certification
+          </h3>
+          <p class="text-gray-700 mb-2">Completed in June 2025</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition text-left">
+          <h3 class="text-xl font-semibold mb-2">
+            <i class="fas fa-certificate text-yellow-500 mr-2"></i>Microsoft Certified: Data Analyst Associate with Power BI
+          </h3>
+          <p class="text-gray-700 mb-2">Completed in June 2025</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition text-left">
+          <h3 class="text-xl font-semibold mb-2">
+            <i class="fas fa-certificate text-yellow-500 mr-2"></i>Prompt Engineering – EDX
+          </h3>
+          <p class="text-gray-700 mb-2">Completed in July 2024</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition text-left">
+          <h3 class="text-xl font-semibold mb-2">
+            <i class="fas fa-certificate text-yellow-500 mr-2"></i>Django Application Development – EDX
+          </h3>
+          <p class="text-gray-700 mb-2">Completed in June 2024</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition text-left">
+          <h3 class="text-xl font-semibold mb-2">
+            <i class="fas fa-certificate text-yellow-500 mr-2"></i>Web Development with HTML, CSS & JS – IBM via EDX
+          </h3>
+          <p class="text-gray-700 mb-2">Completed in June 2024</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition text-left">
+          <h3 class="text-xl font-semibold mb-2">
+            <i class="fas fa-certificate text-yellow-500 mr-2"></i>MySQL – Great Learning
+          </h3>
+          <p class="text-gray-700 mb-2">Completed in June 2024</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition text-left">
+          <h3 class="text-xl font-semibold mb-2">
+            <i class="fas fa-certificate text-yellow-500 mr-2"></i>Python Essentials – Cisco
+          </h3>
+          <p class="text-gray-700 mb-2">Completed in January 2024</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition text-left">
+          <h3 class="text-xl font-semibold mb-2">
+            <i class="fas fa-certificate text-yellow-500 mr-2"></i>AI Skills Workshop – SRKR (Brainovision & AICTE)
+          </h3>
+          <p class="text-700 mb-2">Completed in June 2025</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="px-6 md:px-10 py-24 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen flex items-center justify-center">
+    <div class="max-w-3xl w-full">
+      <h2 class="text-4xl font-extrabold text-center text-blue-600 mb-12">Contact</h2>
+
+      <form id="contact-form" class="space-y-6">
+        <div>
+          <input type="text" name="name" placeholder="Name" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+        </div>
+        <div>
+          <input type="email" name="email" placeholder="Email" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+        </div>
+        <div>
+          <textarea name="message" placeholder="Write the content within 500 characters" rows="6" maxlength="500" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition">Submit</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-white text-center py-8">
+    <h3 class="text-2xl font-bold mb-4">Charan</h3>
+    <div class="flex justify-center gap-6 mb-4">
+      <a href="https://facebook.com" target="_blank" class="hover:text-blue-400"><i class="fab fa-facebook-f text-xl"></i></a>
+      <a href="https://instagram.com" target="_blank" class="hover:text-pink-400"><i class="fab fa-instagram text-xl"></i></a>
+      <a href="https://twitter.com" target="_blank" class="hover:text-blue-300"><i class="fab fa-twitter text-xl"></i></a>
+    </div>
+    <p class="text-sm">© Copyright Charan. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
